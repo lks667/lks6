@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Signing In!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+            color: #333;
+        }
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #2d3e50;
+        }
+        p {
+            font-size: 1.2em;
+            color: #555;
+        }
+        .gift-box {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            background-color: #ff9900;
+            border-radius: 50%;
+            position: relative;
+            animation: bounce 2s infinite;
+        }
+        .gift-box::before {
+            content: "🎁";
+            font-size: 2em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        .button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prize Successfully Completed!</h1>
+        <p>Your prize has been processed and will soon be available in your account. Thank you for your participation!</p>
+        <div class="gift-box"></div>
+        <p>We appreciate your patience, and your prize will arrive shortly.</p>
+        <button class="button" onclick="window.close();">Close</button>
+    </div>
+</body>
+</html>
